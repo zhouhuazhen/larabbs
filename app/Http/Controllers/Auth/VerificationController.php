@@ -26,13 +26,16 @@ class VerificationController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
+     protected $redirectTo = '/';
+
     public function __construct()
     {
         $this->middleware('auth');
