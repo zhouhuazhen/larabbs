@@ -52,4 +52,9 @@ class User extends Authenticatable implements MustVerifyEmailContract
       return $this->registered($request, $user)?: redirect($this->redirectPath());
 
     }
+
+    //一个用户对应多个话题
+    public function topics(){
+      return $this->hasMany(Topic::class);
+    }
 }
